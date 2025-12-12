@@ -45,7 +45,7 @@ jobs:
         with:
           push: ${{ github.event_name != 'pull_request' }}
           tags: |
-            axistools/caddy-bundle:${{ env.CADDY_MAJOR }}.${{ env.CADDY_MINOR }}.${{ env.CADDY_PATCH }}
-            axistools/caddy-bundle:${{ env.CADDY_MAJOR }}.${{ env.CADDY_MINOR }}
-            axistools/caddy-bundle:${{ env.CADDY_MAJOR }}
-            axistools/caddy-bundle:latest
+            ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ env.CADDY_MAJOR }}.${{ env.CADDY_MINOR }}.${{ env.CADDY_PATCH }}
+            ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ env.CADDY_MAJOR }}.${{ env.CADDY_MINOR }}
+            ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ env.CADDY_MAJOR }}
+            ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest
